@@ -16,4 +16,3 @@ use App\Http\Controllers\ClienteController;
 */
 
 Route::get('/clients/{cnpj}', [ClienteController::class, 'listAll']);
-Route::get('/test', [ClienteController::class, 'testDatabase']);

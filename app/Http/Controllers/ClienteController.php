@@ -20,8 +20,6 @@ class ClienteController extends Controller
             ->where('CNPJ', $cnpj)
             ->get();
 
-        // print_r($cliente);
-
         if (!$cliente) {
             return response()->json([
                 'error' => true,
