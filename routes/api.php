@@ -15,9 +15,5 @@ use App\Http\Controllers\ClienteController;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::get('/clients/{cnpj}', [ClienteController::class, 'listAll']);
 Route::get('/test', [ClienteController::class, 'testDatabase']);
