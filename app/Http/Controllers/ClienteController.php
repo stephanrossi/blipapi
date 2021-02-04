@@ -24,12 +24,12 @@ class ClienteController extends Controller
             return response()->json([
                 'error' => true,
                 'msg' => 'Nenhum cliente encontrado.'
-            ]);
+            ], 200);
         }
 
         return response()->json([
             'error' => false,
             'data' => $cliente
-        ]);
+        ], 200);
     }
 }
