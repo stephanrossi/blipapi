@@ -10,7 +10,12 @@ class ClienteController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['listAll']]);
+        $this->middleware('auth:api', ['except' => ['listAll', 'ping']]);
+    }
+
+    public function ping()
+    {
+        return response()->json(['msg' => 'Pong!']);
     }
 
     public function listAll($cnpj)
