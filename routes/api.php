@@ -16,6 +16,6 @@ use App\Http\Controllers\ClienteController;
 */
 
 Route::get('/clients/{cnpj}', [ClienteController::class, 'listOne']);
-Route::get('/clients', [ClienteController::class, 'listAll']);
+Route::get('/clients', [ClienteController::class, 'listAll'])->middleware('api');
 
 Route::get('/ping', [ClienteController::class, 'ping']);
