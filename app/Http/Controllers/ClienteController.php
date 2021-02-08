@@ -36,7 +36,8 @@ class ClienteController extends Controller
 
         return response()->json([
             'error' => false,
-            'data' => $cliente
+            'nome' => $cliente->NOME,
+            'status' => $cliente->STATUS
         ], 200);
     }
 
@@ -55,6 +56,7 @@ class ClienteController extends Controller
         return response()->json([
             'error' => false,
             'data' => $cliente
-        ], 200);
+        ], 200)
+            ->withHeaders(['Access-Control-Allow-Origin' => '*']);
     }
 }
